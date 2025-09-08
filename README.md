@@ -29,3 +29,26 @@ prints it in the terminal.
 ○ A README.md with setup instructions and dependencies.
 ○ Steps to build and run the object detection system.
 ● Demonstration Video or GIF:
+
+## Steps to run:
+1. Make a workspace(or get inside one):
+   ```bash
+   mkdir -p ~/ros2_ws/src
+   cd ~/ros2_ws/src
+   ```
+2. Clone the package inside a workspace:
+   ```bash
+   git clone https://github.com/Nandostream11/object_detection_tracking.git
+   ```
+3. Build the package:
+   ```bash
+   colcon build --packages-select object_detection_tracking
+   ```
+4. Run the camera
+   ```bash
+   ros2 run object_detection_tracking camera_publisher
+   ```
+5. Run the launch file for detection
+   ```bash
+   ros2 launch object_detection_tracking detection_launch.py
+   ```
