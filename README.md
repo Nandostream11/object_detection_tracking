@@ -1,5 +1,4 @@
-# Object_detection_tracking
-Object Detection &amp; Tracking in ROS 2 (Using OpenCV/YOLO)
+# Object Detection &amp; Tracking in ROS 2 (Using OpenCV/YOLO)
 
 - Set up object detection and tracking in ROS 2 using OpenCV, YOLO, or another
 model.
