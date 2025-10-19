@@ -40,8 +40,9 @@ prints it in the terminal.
    ```bash
    git clone https://github.com/Nandostream11/object_detection_tracking.git
    ```
-3. Build the package:
+3. Build the package and source the build using source install/setup.bash:
    ```bash
+   cd ~/ros2_ws
    colcon build --packages-select object_detection_tracking
    ```
 4. Run the camera
