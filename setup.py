@@ -27,6 +27,7 @@ setup(
             'object_detector = object_detection_tracking.object_detection:main',
             'object_tracker = object_detection_tracking.object_tracking:main',
             'camera_publisher = object_detection_tracking.cam_data:main',
+            'apriltag_detector = object_detection_tracking.apriltag_detector:main',
         ],
     },
 )
