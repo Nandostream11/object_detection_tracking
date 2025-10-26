@@ -53,3 +53,7 @@ prints it in the terminal.
    ```bash
    ros2 launch object_detection_tracking detection_launch.py
    ```
+for running april tag tracking,
+```
+pip install pupil-apriltags
+```
