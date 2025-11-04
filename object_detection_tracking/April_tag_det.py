@@ -60,6 +60,18 @@ class AprilTagDetectorNode(Node):
         for tag in tags:
             tag_id = tag.tag_id
             cx, cy = map(int, tag.center)
+            # --- Approximate pixel → world coordinate mapping ---
+            # These constants can be tuned to align with your reference Bezier curve
+            SCALE_X = 0.0004     # meters per pixel in X
+            SCALE_Y = -0.0004    # negative flips Y-axis (image Y increases downward)
+            OFFSET_X = -0.10     # where your world origin starts in meters
+            OFFSET_Y = -0.30     # offset to align with Bezier Y region
+
+            wx = cx * SCALE_X + OFFSET_X
+            wy = cy * SCALE_Y + OFFSET_Y
+
+            detections_msg[tag_id] = {'center': [wx, wy]}
+
 
             # Update trajectory
             if tag_id not in self.trajectories:
